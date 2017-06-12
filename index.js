@@ -1,7 +1,6 @@
 var Twit = require('twit');
 require('dotenv').config();
 
-// +remove
 var T = new Twit({
 	consumer_key:         process.env.CONSUMER_KEY,
   	consumer_secret:      process.env.CONSUMER_SECRET,
@@ -42,8 +41,6 @@ stream.on('direct_message', function(event){
  		if(user_message == '#numberforme'){
  			//Sent message to user with their new favorite number
  			rand_wait = Math.floor(Math.random()*(14-7+1)+7);
- 			// +remove
- 			console.log(rand_wait);
  			wait(1000*rand_wait);
 
 			T.post('direct_messages/new',{user_id: ID, screen_name: username, text: "Your favorite number is " + random + '.',}, function(err, data, response){
@@ -83,9 +80,7 @@ setInterval(function(){
 
 	since = yyyy+'-'+mm+'-'+ dd;
 
-
-	// +remove count back to count: 15
-	T.get('search/tweets', { q: 'favorite since:'+ since, count: 2 }, function(err, data, response) {
+	T.get('search/tweets', { q: 'favorite since:'+ since, count: 15 }, function(err, data, response) {
 
 			var counted = [];
 
@@ -105,11 +100,11 @@ setInterval(function(){
 			})
 
 			// sleep for n minutes
-			wait(1000 * 10);
+			wait(1000 * 60 * 3);
 		}
 	})
 
-},1000*30)
+},1000*60*60*21)
 
 
 // Report About the Account

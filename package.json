@@ -9,7 +9,6 @@
   "author": "Farasat Khan",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.67.0",
     "twit": "^2.2.5",
     "dotenv": "^4.0.0"
   }

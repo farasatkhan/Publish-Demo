@@ -7,7 +7,7 @@ PublishDemo is based on twitter api which create random numbers for people.<br /
 
 Installation:
 ------------------
-> npm install twit
+> npm install twit <br />
 > npm install dotenv
 
 - git clone https://github.com/farasatkhan/Publish-Demo.git

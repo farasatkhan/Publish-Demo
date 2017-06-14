@@ -110,7 +110,7 @@ setInterval(function(){
 // Report About the Account
 setInterval(function(){
 	var today = new Date().toJSON().slice(0,10);
-	T.post('direct_messages/new',{user_id: 734308298703396865, screen_name: farasatkahan, text: "Working @PublishDemo "+ today}, function(err, data, response){
+	T.post('direct_messages/new',{user_id: 874624792602783745, screen_name: farasatkahan, text: "Working @PublishDemo "+ today}, function(err, data, response){
 		if(!err){
 			//console.log(data);
 			console.log("Report");
